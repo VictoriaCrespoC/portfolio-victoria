@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Portfolio de Victoria Crespo Cruz</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav header">
+        <a class="logo" href="index.html"><img src="https://res.cloudinary.com/ues3uf7h/image/upload/v1793793476/Logotipo_VCC_en_tonos_oliva.png" alt="VC (logo)"/></a>
+        <ul>
+            <li class="menu">
+                <a href="#about">About</a>
+            </li>
+            <li class="menu">
+                <a href="#">Skills</a>
+            </li>
+            <li class="menu">
+                <a href="#">Cheatsheets</a>
+            </li>
+            <li class="menu">
+                <a href="#">Recursos</a>
+            </li>
+            <li class="contacto">
+                <a href="contacto.html">Contacto</a>
+            </li>
+        </ul>
+        <button
+        class="hamburguer"
+        id="hamburguer"
+        aria-label="Menú de navegación"
+        >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    </header>
+    <main>
+      <section class="formulario">
+        <h2>Contacto</h2>
+        <p>¿Te gustaría contactar conmigo o compartir alguna idea? Escribe tu mensaje</p>
+        <form action="/Enviar" method="post">
+        <fieldset>
+          <legend>Tus datos</legend>
+          <div>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="nombre" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto"  required>
+          </div>
+          <div>
+            <label class="mensaje" for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aquí..." rows=5></textarea>
+          </div>
+
+          <input class="Enviar" type="submit" value="Enviar">
+          <button class="Borrar" type="reset">Borrar todo</button>
+
+        </fieldset>
+      </form>
+
+      </section>
+    </main>
+  </body>
+</html>

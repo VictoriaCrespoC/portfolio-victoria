@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --color-beige: #D8C6A5;
+  --color-primary: #51402F;
+  --color-secondary: #806548;
+  --color-accent: #777453;
+  --color-background: #FCF9F5;
+  --color-border: #B49A78;
+  --color-text: #30251D;
+  --color-hero: #a67739;
+
+  --font-family: Roboto, sans-serif;
+
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.5rem;
+  --font-size-base: 1rem;
+  --font-size-button: 14px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --border-width: 1px;
+  --border-style: solid;
+
+  --header-height: 70px;
+  --spacing-main: 50px;
+  --box-shadow: 0 2px 5px rgba(93, 90, 86, 0.718);
+
+}
+
+body{
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  padding: 10px 10px;
+  background-color: var(--color-background);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: #B49A78;
+  box-shadow: var(--box-shadow);
+}
+
+.logo img{
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-right: 30px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.menu{
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu:hover{
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  padding: 10px;
+  border: 5px;
+  border-radius: 15%;
+}
+
+.contacto{
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  padding: 10px;
+  border: 5px;
+  border-radius: 15%;
+}
+.contacto:hover{
+  background-color: var(--color-background);
+  color: var(--color-accent);  
+}
+
+@media screen and (max-width:429px){
+  .hamburguer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--header-height);
+  }
+  .hamburguer span{
+    width: 25px;
+    height: 3px;
+    background-color: #51402F;
+  }
+  ul{
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    left: -100%;
+    width: 100%;
+    background-color: var(--color-background);
+    box-shadow: var(--box-shadow);
+    padding: 50px;
+  }
+}
+
+@media screen and (min-width: 430px) {
+  .hamburguer{
+    display: none;
+  }
+  ul{
+    display: flex;
+  }
+}
+
+/*MAIN*/
+
+main{
+  padding: var(--spacing-main);
+  flex: 1;
+  margin-top: var(--header-height);  
+}
+
+section{
+  padding-bottom: 20px;
+}
+
+h1{
+  font-weight: var(--font-weight-black);
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+.hero img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: var(--box-shadow);
+}
+
+.hero h2{
+  font-weight: var(--font-weight-medium);
+  font-size: 1.5rem;
+  color: var(--color-hero);
+}
+
+.hero p, .hero h2{
+  margin-bottom: 20px;
+} 
+
+
+.section h2{
+  font-weight: var(--font-weight-bold);
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+section p{
+  color: var(--color-text);
+  text-align: justify;
+}
+
+.linkedIn{
+  background-color: #526B85;
+  color: white;
+  font-weight: var(--font-size-base);
+  font-size: var(--font-weight-light);
+  padding: 10px;
+  border-radius: 8%;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/*Añado animación a linkedin*/
+@keyframes linkedIn{
+  0%{
+    background-color: #526B85;
+    color: white;
+  }
+  50%{
+    background-color: #285F91;
+    color: white;
+  }
+  100%{
+    background-color: white;
+    color: #0A66C2;
+    border: 3px solid #0A66C2;
+  }
+}
+.linkedIn:hover {
+  animation: linkedIn 0.7s ease forwards;
+}
+
+
+/*FOOTER*/
+
+footer{
+  background-color: var(--color-text);
+  height: auto;
+}
+
+article a{
+  display:flex; 
+  color: white;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.text-footer{
+  display: flex;
+  color: var(--color-background);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-light);
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
+/*contacto*/
+
+fieldset {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 2px solid var(--color-border);
+  border-radius: 5%;
+}
+
+.formulario h2{
+  font-weight: var(--font-weight-bold);
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.formulario p{
+  font-weight: var(--font-weight-medium);
+  font-size: 1rem;
+  color: var(--color-text);
+  padding: 10px;
+}
+
+legend{
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+div{
+  padding: 10px;
+}
+
+input{
+  border: 2px solid var(--color-accent);
+  padding: 3px;
+  background-color: var(--color-background);
+}
+
+textarea{
+  border: 2px solid var(--color-accent);
+  padding: 3px;
+  resize: none;
+  overflow-y: auto;
+  background-color: var(--color-background);
+}
+
+.mensaje{
+  display: flex;
+  text-align: justify;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input.Enviar{
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  padding: 5px;
+}
+.Borrar{
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-background);
+  border-color: var(--color-accent);
+  color: var(--color-accent)
+}
