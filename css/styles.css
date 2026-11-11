@@ -113,7 +113,7 @@ ul{
     height: 3px;
     background-color: #51402F;
   }
-  ul{
+  nav ul{
     display: none;
     position: fixed;
     top: var(--header-height);
@@ -151,7 +151,7 @@ h1{
   font-size: 2rem;
   color: var(--color-primary);
 }
-.hero img{
+.hero1{
   max-width: 100%;
   height: auto;
   border-radius: 5%;
@@ -168,7 +168,6 @@ h1{
   margin-bottom: 20px;
 } 
 
-
 .section h2{
   font-weight: var(--font-weight-bold);
   font-size: 1.5rem;
@@ -180,18 +179,6 @@ section p{
   text-align: justify;
 }
 
-.linkedIn{
-  background-color: #526B85;
-  color: white;
-  font-weight: var(--font-size-base);
-  font-size: var(--font-weight-light);
-  padding: 10px;
-  border-radius: 8%;
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  cursor: pointer;
-}
 
 /*Añado animación a linkedin*/
 @keyframes linkedIn{
@@ -242,6 +229,133 @@ article a{
   padding-bottom: 20px;
 }
 
+/*ABOUT HTML*/
+.linkedIn{
+  background-color: #526B85;
+  color: white;
+  font-weight: var(--font-size-base);
+  font-size: var(--font-weight-light);
+  padding: 10px;
+  border-radius: 8%;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+}
+.contactoAbout{
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: var(--font-size-base);
+  font-size: var(--font-weight-light);
+  padding: 10px;
+  border-radius: 8%;
+  display: block;
+  width: fit-content; 
+  cursor: pointer;
+}
+.botonesAbout{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.hero2{
+  width: 250px;
+  height: 250px;
+  padding: 15px;
+  flex-shrink: 0;
+  background-color: var(--color-beige);
+  background-image:
+
+        radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.35), transparent 35%),
+        radial-gradient(ellipse at 80% 70%, rgba(81,64,47,0.15), transparent 40%),
+        linear-gradient(135deg, transparent 40%, rgba(81,64,47,0.10) 50%, transparent 60%),
+        linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.3) 50%, transparent 55%);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: 4px 5px 12px rgba(48, 37, 29, 0.15);
+  overflow: hidden;
+}
+
+h3{
+  color: var(--color-hero);
+  font-size: medium;
+  font-weight: var(--font-weight-black);
+}
+h4{
+  color: var(--color-primary);
+  font-size: medium;
+  font-weight: var(--font-weight-bold);
+}
+.año{
+  color: grey;
+  font-weight: var(--font-weight-bold);
+}
+
+@media screen and (min-width:429px){
+  .heroabout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.educationCard{
+  background-color: var(--color-background);
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-hero);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(99, 76, 59, 0.08);
+}
+.tituloeducation{
+  margin: 0px;
+  padding: 15px;
+}
+
+.valorescontainer{
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.valores { 
+  background-color: var(--color-beige);
+  text-align: center;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.valores:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+}
+
+.valores h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.valores p {
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: center;
+}
+
+.valores:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(48, 37, 29, 0.12);
+}
+
+ @media screen and (max-width: 600px) {
+    .valorescontainer {
+        grid-template-columns: 1fr;
+    }
+ }
 
 /*contacto*/
 
