@@ -253,6 +253,25 @@ article a{
   width: fit-content; 
   cursor: pointer;
 }
+
+@keyframes contactoAbout{
+  0%{
+    background-color: var(--color-accent);
+    color: white;
+  }
+  50%{
+    background-color: #596f4c;
+    color: white;
+  }
+  100%{
+    background-color: white;
+    color: var(--color-accent);
+    border: 3px solid var(--color-accent);
+  }
+}
+.contactoAbout:hover {
+  animation: contactoAbout 0.7s ease forwards;
+}
 .botonesAbout{
   display: flex;
   justify-content: flex-end;
