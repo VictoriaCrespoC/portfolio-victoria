@@ -98,7 +98,7 @@ ul{
   color: var(--color-accent);  
 }
 
-@media screen and (max-width:429px){
+@media screen and (max-width:768px){
   .hamburguer{
     display: flex;
     flex-direction: column;
@@ -113,19 +113,36 @@ ul{
     height: 3px;
     background-color: #51402F;
   }
-  nav ul{
+  .menu-burguer {
     display: none;
     position: fixed;
     top: var(--header-height);
-    left: -100%;
+    right: -100%;
     width: 100%;
     background-color: var(--color-background);
     box-shadow: var(--box-shadow);
-    padding: 50px;
+    padding: 10px;
   }
 }
 
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 591px) and (max-width:768px) {
+  .menu-burguer.abierto {
+    display: flex;
+    flex-direction: row;
+    right: 0;
+  }
+}
+
+@media screen and (max-width:590px) {
+    .menu-burguer.abierto {
+    display: flex;
+    right: 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media screen and (min-width: 769px) {
   .hamburguer{
     display: none;
   }
@@ -311,7 +328,7 @@ h4{
   font-weight: var(--font-weight-bold);
 }
 
-@media screen and (min-width:429px){
+@media screen and (min-width:530px){
   .heroabout{
     display: flex;
     justify-content: space-between;
@@ -319,6 +336,15 @@ h4{
     gap: 30px;
   }
 }
+@media screen and (max-width:529px){
+  .heroabout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
 
 .educationCard{
   background-color: var(--color-background);
