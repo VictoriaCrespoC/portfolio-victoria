@@ -63,6 +63,17 @@ nav{
   margin: 0px;
 }
 
+.sun {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    transition: background-color 0.3s ease;
+}
+
+.sun:hover{
+  transform: scale(1.15) translate(3px, -3px);
+}
+
 ul{
   display:flex;
   justify-content: center;
@@ -302,11 +313,11 @@ article a{
   flex-shrink: 0;
   background-color: var(--color-beige);
   background-image:
-
         radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.35), transparent 35%),
         radial-gradient(ellipse at 80% 70%, rgba(81,64,47,0.15), transparent 40%),
         linear-gradient(135deg, transparent 40%, rgba(81,64,47,0.10) 50%, transparent 60%),
         linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.3) 50%, transparent 55%);
+
   border: 1px solid var(--color-border);
   border-radius: 4px;
   box-shadow: 4px 5px 12px rgba(48, 37, 29, 0.15);

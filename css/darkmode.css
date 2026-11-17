@@ -1,0 +1,199 @@
+:root{
+    --dark-beige: #C7B18D;
+    --dark-primary: #D8C6A5;
+    --dark-secondary: #B49A78;
+    --dark-accent: #A3A080;
+    --dark-background: #211D18;
+    --dark-border: #66533F;
+    --dark-text: #F0E8DC;
+    --dark-hero: #C18B4D;
+}
+
+
+body.darkmode{
+  color: var(--dark-text);
+  background-color: var(--dark-background);
+}
+
+
+body.darkmode nav{
+  background-color: var(--dark-background);
+  border-bottom: #B49A78;
+  box-shadow: var(--box-shadow);
+}
+
+body.darkmode ul{
+  color: var(--dark-primary);
+}
+
+/*.menu:hover{
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  padding: 10px;
+  border: 5px;
+  border-radius: 15%;
+}*/
+
+body.darkmode .contacto{
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  padding: 10px;
+  border: 5px;
+  border-radius: 15%;
+}
+/*.contacto:hover{
+  background-color: var(--color-background);
+  color: var(--color-accent);  
+}*/
+
+
+body.darkmode .hamburguer span{
+    background-color: #d3c2b2;
+  }
+body.darkmode .menu-burguer {
+    background-color: var(--dark-background);
+    box-shadow: var(--box-shadow);
+  }
+
+body.darkmode h1{
+  color: var(--dark-primary);
+}
+
+body.darkmode .hero h2{
+  color: var(--dark-hero);
+}
+
+body.darkmode .section h2{
+  color: var(--dark-secondary);
+}
+
+body.darkmode section p{
+  color: var(--dark-text);
+}
+
+body.darkmode .hero2{
+  background-color: var(--dark-beige);
+  /*background-image:
+        radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.35), transparent 35%),
+        radial-gradient(ellipse at 80% 70%, rgba(81,64,47,0.15), transparent 40%),
+        linear-gradient(135deg, transparent 40%, rgba(81,64,47,0.10) 50%, transparent 60%),
+        linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.3) 50%, transparent 55%);
+*/
+  box-shadow: 4px 5px 12px rgba(48, 37, 29, 0.15);
+}
+
+body.darkmode h3{
+  color: var(--dark-hero);
+}
+
+body.darkmode h4{
+  color: var(--dark-primary);
+}
+/*.año{
+  color: grey;
+  font-weight: var(--font-weight-bold);
+}*/
+
+body.darkmode .educationCard {
+  background-color: var(--dark-background);
+  border: 1px solid var(--dark-border);
+  border-left: 5px solid var(--dark-hero);
+  /*box-shadow: 0 3px 10px rgba(99, 76, 59, 0.08);*/
+}
+
+body.darkmode .valores { 
+  background-color: var(--dark-border);
+  border: 1px solid var(--dark-beige);
+}
+
+body.darkmode .valores h3 {
+    color: var(--dark-hero);
+}
+
+
+/*.valores:hover {
+    box-shadow: 0 5px 12px rgba(48, 37, 29, 0.12);
+}*/
+
+/*contacto*/
+
+body.darkmode fieldset {
+  border: 2px solid var(--dark-border);
+}
+
+body.darkmode .formulario h2{
+  color: var(--dark-secondary);
+}
+
+body.darkmode .formulario p{
+  color: var(--dark-text);
+}
+
+body.darkmode legend{
+  color: var(--dark-secondary);
+}
+
+body.darkmode input{
+  border: 2px solid var(--dark-accent);
+  background-color: var(--dark-background);
+}
+
+body.darkmode textarea{
+  border: 2px solid var(--dark-accent);
+  background-color: var(--dark-background);
+}
+
+body.darkmode input.Enviar {
+  background-color: var(--dark-accent);
+  color: var(--dark-background);
+}
+body.darkmode .Borrar{
+  background-color: var(--dark-background);
+  border-color: var(--dark-accent);
+  color: var(--dark-accent)
+}
+
+
+
+/*Voy a añadir estrellitas cuando le doy al boton*/
+/* Contenedor de las estrellas */
+.star-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Cada estrella */
+.falling-star {
+    position: absolute;
+    top: -30px;
+    color: #C7B18D;
+    animation: falling linear forwards;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+        transform: translateY(15vh) rotate(45deg) scale(1);
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(180deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+sun.addEventListener('click', () => {
+
+    body.classList.toggle("darkmode");
+
+    lanzarEstrellas();
+
+});
