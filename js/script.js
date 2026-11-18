@@ -18,9 +18,21 @@ liburguer.forEach ((a) => {
 const sun = document.querySelector(".sun");
 const body = document.querySelector("body");
 
+const modoGuardado = localStorage.getItem("darkmode");
+if (modoGuardado === "true") {
+        body.classList.add("darkmode");
+}
+
 sun.addEventListener('click', () =>{
     body.classList.toggle("darkmode");
+    
+    const modoOscuroActivo = body.classList.contains("darkmode"); //comprueba si existe la clase darkmode en ese momento
+    localStorage.setItem("darkmode", modoOscuroActivo);
 })
+
+
+
+
 
 
 
@@ -54,7 +66,7 @@ function lanzarEstrellas() {
 
     setTimeout(() => {
         contenedor.remove();
-    }, 5000);
+    }, 6000);
 }
 
 sun.addEventListener('click', () => {

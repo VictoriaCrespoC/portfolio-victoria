@@ -189,11 +189,3 @@ body.darkmode .Borrar{
         opacity: 0;
     }
 }
-
-sun.addEventListener('click', () => {
-
-    body.classList.toggle("darkmode");
-
-    lanzarEstrellas();
-
-});
