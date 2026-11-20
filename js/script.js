@@ -14,6 +14,16 @@ liburguer.forEach ((a) => {
     })
 })
 
+//si no hacemos click en el boton hamburguesa o en el menu que contiene estará cerrado:
+document.addEventListener ('click', (e) => {
+    if(
+        !menuburguer.contains(e.target) &&
+        !hamburguer.contains(e.target)
+    ) {
+        menuburguer.classList.remove("abierto")
+    }
+})
+
 //Vamos a activar/desactivar el modo oscuro
 const sun = document.querySelector(".sun");
 const body = document.querySelector("body");
