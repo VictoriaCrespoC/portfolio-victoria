@@ -8,10 +8,10 @@ export default function skillsList () {
         }).join("");
         const skillCard = `
           <article class="skill-card">
-              <img src="${skill.icon}" alt="Icono de ${skill.icon}">
-              <h3>${skill.name}</h3>
-              <p>${skill.description}</p>
-              <p>${skill.level}</p>
+              <img src="${skill.icon}" alt="Icono de ${skill.name}">
+              <h3 class="skillName">${skill.name}</h3>
+              <p class="skillDescription">${skill.description}</p>
+              <p class="skillLevel">${skill.level}</p>
 
               <div class="skill-tags">${skillTags}</div>
           </article>`;

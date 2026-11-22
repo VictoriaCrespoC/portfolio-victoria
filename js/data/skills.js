@@ -7,7 +7,7 @@ const skills = [
         icon: "https://cdn.simpleicons.org/pubmed",
         state: "dominada",
         level: "Avanzado",
-        description: "Búsqueda, evaluación crítica, interpretación y síntesis de literatura científica, incluyendo la comprensión de metodologías, resultados y evidencia científica.",
+        description: "Búsqueda, evaluación crítica, interpretación y síntesis de literatura científica.",
         tags: ["Literature Search", "Methodology Analysis", "Evidence Synthesis"]
     },
     {
@@ -15,7 +15,7 @@ const skills = [
         icon: "https://cdn.simpleicons.org/duolingo",
         state: "dominada",
         level: "B2",
-        description: "Upper-intermediate English proficiency, with the ability to communicate in everyday situations and understand written and spoken English.",
+        description: "Nivel de inglés intermedio alto (B2), con capacidad para comunicarse en situaciones cotidianas y comprender textos y conversaciones en inglés.",
         tags: ["B2 Aptis", "Communication", "Reading"]
     },
     {

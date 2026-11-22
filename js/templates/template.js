@@ -7,7 +7,7 @@ export const header = `
                 <a href="about.html">About</a>
             </li>
             <li class="menu">
-                <a href="#">Skills</a>
+                <a href="index.html#skills">Skills</a>
             </li>
             <li class="menu">
                 <a href="#">Cheatsheets</a>
@@ -15,7 +15,7 @@ export const header = `
             <li class="menu">
                 <a href="#">Recursos</a>
             </li>
-            <li class=" menu contacto">
+            <li class="menu contacto">
                 <a href="contacto.html">Contacto</a>
             </li>
         </ul>
