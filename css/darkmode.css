@@ -26,13 +26,6 @@ body.darkmode ul{
   color: var(--dark-primary);
 }
 
-/*.menu:hover{
-  background-color: var(--color-secondary);
-  color: var(--color-background);
-  padding: 10px;
-  border: 5px;
-  border-radius: 15%;
-}*/
 
 body.darkmode .contacto{
   background-color: var(--color-accent);
@@ -188,4 +181,34 @@ body.darkmode .Borrar{
         transform: translateY(110vh) rotate(180deg) scale(0.5);
         opacity: 0;
     }
+}
+
+
+/*DarkMode de skill*/
+
+body.darkmode .skill-card { 
+  background-color: var(--dark-background);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-hero); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.darkmode .skillLevel {
+    font-size: 0.85rem;
+    display: inline-block;
+    text-align: center;
+    font-weight: 800;
+    color: var(--dark-accent);
+}
+
+body.darkmode .skill-tag{
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    gap: 15px;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #f9dfaa;
+    color: var(--dark-background);
 }
