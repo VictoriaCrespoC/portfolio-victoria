@@ -1,13 +1,13 @@
 export const header = `
   <header>
       <nav class="nav header">
-        <a class="logo" href="index.html"><img src="https://res.cloudinary.com/ues3uf7h/image/upload/v1793793476/Logotipo_VCC_en_tonos_oliva.png" alt="VC (logo)"/></a>
+        <a class="logo" href="../index.html"><img src="https://res.cloudinary.com/ues3uf7h/image/upload/v1793793476/Logotipo_VCC_en_tonos_oliva.png" alt="VC (logo)"/></a>
         <ul class="menu-burguer" id="menu-burguer">
             <li class="menu">
-                <a href="about.html">About</a>
+                <a href="../pages/about.html">About</a>
             </li>
             <li class="menu">
-                <a href="index.html#skills">Skills</a>
+                <a href="../index.html#skills">Skills</a>
             </li>
             <li class="menu">
                 <a href="#">Cheatsheets</a>
@@ -16,7 +16,7 @@ export const header = `
                 <a href="#">Recursos</a>
             </li>
             <li class="menu contacto">
-                <a href="contacto.html">Contacto</a>
+                <a href="../pages/contacto.html">Contacto</a>
             </li>
         </ul>
         <button class="sun">
@@ -47,14 +47,14 @@ export const footer = `
       <article>
         <ul class="enlaces">
           <li>
-            <a href="about.html">About</a>
+            <a href="../pages/about.html">About</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/victoria-crespo-918b86371" target="_blank"
             rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
-            <a href="contacto.html">Contacto</a>
+            <a href="../pages/contacto.html">Contacto</a>
           </li>
         </ul>
       </article>
