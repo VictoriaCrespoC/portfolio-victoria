@@ -1,0 +1,96 @@
+:root{
+  --color-beige: #D8C6A5;
+  --color-primary: #51402F;
+  --color-secondary: #806548;
+  --color-accent: #777453;
+  --color-background: #FCF9F5;
+  --color-border: #B49A78;
+  --color-text: #30251D;
+  --color-hero: #a67739;
+
+  --font-family: Roboto, sans-serif;
+
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.5rem;
+  --font-size-base: 1rem;
+  --font-size-button: 14px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --border-width: 1px;
+  --border-style: solid;
+
+  --header-height: 70px;
+  --spacing-main: 50px;
+  --box-shadow: 0 2px 5px rgba(93, 90, 86, 0.718);
+
+}
+
+#cheatsheets-container {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+}
+ @media screen and (max-width: 590px) {
+    #cheatsheets-container {
+        grid-template-columns: 1fr;
+    }
+ }
+@media screen and (min-width: 591px) and (max-width: 768px) {
+    #cheatsheets-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+ }
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    #cheatsheets-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+ }
+
+@media screen and (min-width: 1025px) {
+    #cheatsheets-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+ }
+
+.cheat-card { 
+  background-color: #F0E8DB;
+  padding: 25px;
+  border-radius: 2px;
+  border-left: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cheat-card img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    position: center;
+}
+
+.cheatName {
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.cheatDescription {
+    font-size: 0.95rem;
+    margin: 0;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.cheat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(48, 37, 29, 0.12);
+}

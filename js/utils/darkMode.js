@@ -1,20 +1,13 @@
 export default function darkMode() {
 
-  //Vamos a activar/desactivar el modo oscuro
+  //Vamos a guardar preferencias
   const sun = document.querySelector(".sun");
   const body = document.querySelector("body");
 
   const modoGuardado = localStorage.getItem("darkmode");
   if (modoGuardado === "true") {
           body.classList.add("darkmode");
-  }
-
-  sun.addEventListener('click', () =>{
-      body.classList.toggle("darkmode");
-    
-      const modoOscuroActivo = body.classList.contains("darkmode"); //comprueba si existe la clase darkmode en ese momento
-      localStorage.setItem("darkmode", modoOscuroActivo);
-  })
+  };
 
   //Añadir estrellas
 
@@ -49,8 +42,17 @@ export default function darkMode() {
       }, 6000);
   }
 
-  sun.addEventListener('click', () => {
-      lanzarEstrellas();
-  });
 
+//Activar/ Desactivar modo oscuro
+
+ sun.addEventListener("click", () =>{
+      body.classList.toggle("darkmode");
+    
+      const modoOscuroActivo = body.classList.contains("darkmode"); //comprueba si existe la clase darkmode en ese momento
+      localStorage.setItem("darkmode", modoOscuroActivo);
+
+      if (modoOscuroActivo===true){
+        lanzarEstrellas();
+      }
+  });
 }

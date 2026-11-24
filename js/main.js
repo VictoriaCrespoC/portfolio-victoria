@@ -15,6 +15,9 @@ darkMode();
 import skillsList from "./utils/skillsList.js";
 skillsList();
 
+import cheatsheetsList from "./utils/cheatsheetsList.js";
+cheatsheetsList();
+
 
 
 

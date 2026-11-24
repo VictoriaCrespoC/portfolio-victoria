@@ -18,6 +18,4 @@ export default function skillsList () {
 
         skillsContainer.innerHTML += skillCard; //me permite añadir tarjetas sin borrar las anteriroes
     });
-
-
 }

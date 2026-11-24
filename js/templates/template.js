@@ -10,7 +10,7 @@ export const header = `
                 <a href="../index.html#skills">Skills</a>
             </li>
             <li class="menu">
-                <a href="#">Cheatsheets</a>
+                <a href="../index.html#cheatsheets">Cheatsheets</a>
             </li>
             <li class="menu">
                 <a href="#">Recursos</a>

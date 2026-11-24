@@ -45,7 +45,6 @@ body.darkmode .hamburguer span{
   }
 body.darkmode .menu-burguer {
     background-color: var(--dark-background);
-    box-shadow: var(--box-shadow);
   }
 
 body.darkmode h1{
@@ -211,4 +210,9 @@ body.darkmode .skill-tag{
     border-radius: 20px;
     background-color: #f9dfaa;
     color: var(--dark-background);
+}
+
+/*DARKMODE DE CHEATSHEETS*/
+body.darkmode .cheat-card{
+  background-color: #403426;
 }
