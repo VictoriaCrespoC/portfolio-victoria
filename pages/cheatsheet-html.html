@@ -4,18 +4,71 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <title>Portfolio de Victoria Crespo Cruz</title>
+    <meta name="description" content="Portfolio personal con proyectos de HTML, CSS y JavaScript.">
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/skills.css">
-    <link rel="stylesheet" href="./css/cheatsheets.css">
+    <link rel="stylesheet" href="../css/cheatsheets.css">
     <link rel="stylesheet" href="../css/darkmode.css">
     
   </head>
   <body>
     <div id="header-container"></div>
     <main>
-        <section></section>
+        <section class="HTML">
+            <h1>HTML</h1>
+            <p>Guía rápida para escribir HTML moderno y semántico: estructura, meta, texto, enlaces, listas, multimedia, tablas, formularios, accesibilidad y buenas prácticas</p>
+            <article>
+              <h2>Estructura básica</h2>
+              <div class="basic">
+                <pre><code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="es"&gt;
+             &lt;head&gt;
+                 &lt;!-- <em>Codificación de caracteres</em> --&gt;
+                 &lt;meta charset="UTF-8"&gt;
+
+                 &lt;!-- <em>Configuración responsive</em> --&gt;
+                 &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                 
+                 &lt;!-- <em>Título y descripción</em> --&gt;
+                 &lt;title&gt;Título&lt;/title&gt;
+                 &lt;meta name="description" content="Descripción"&gt;
+
+             &lt;/head&gt;
+             &lt;body&gt;
+                 &lt;main&gt;Contenido&lt;/main&gt;
+             &lt;/body&gt;
+        &lt;/html&gt;
+                </code></pre>
+              </div>
+              <ul class="key-points">
+                <li><strong>DOCTYPE</strong> primero.</li>
+                <li><strong>meta charset</strong> lo más arriba posible.</li>
+                <li><strong>viewport</strong> para responsive.</li>          
+              </ul>
+            </article>
+            <article>
+              <h2>Open Graph</h2>
+              <p>Open Graph es un conjunto de metadatos que permite controlar cómo se presenta una página cuando se comparte en redes sociales.</p>
+              <div class="basic">
+                <pre><code>
+                 &lt;!-- <em>Open Graph: previsualización en redes sociales</em> --&gt;
+                 &lt;meta property="og:title" content="Título en redes"&gt;
+                 &lt;meta property="og:description" content="Descripción para redes"&gt;
+                 &lt;meta property="og:image" content="URL_DE_LA_IMAGEN"&gt;
+             &lt;/head&gt;
+             &lt;body&gt;
+                 &lt;main&gt;Contenido&lt;/main&gt;
+             &lt;/body&gt;
+        &lt;/html&gt;
+                </code></pre>
+              </div>
+            </article>
+          
+          </section>
+
     </main>
     <div id="footer-container"></div>
     <script type="module" src="../js/main.js"></script>

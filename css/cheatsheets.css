@@ -64,6 +64,10 @@
   border-left: 2px solid var(--color-border);
   border-bottom: 2px solid var(--color-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .cheat-card img {
@@ -94,3 +98,81 @@
     transform: translateY(-4px);
     box-shadow: 0 5px 12px rgba(48, 37, 29, 0.12);
 }
+
+/*Cheatsheet de html*/
+.HTML p {
+   padding-bottom: 20px;
+}
+
+.HTML section {
+    background-color: #E8DCC7;
+}
+
+.HTML article {
+    background-color: #D8C6A5;
+    padding: 10px;
+    gap: 10px;
+}
+
+.HTML article h2{
+    font-size: var(--font-size-subtitle);
+    font-weight: 600;
+    color: var(--color-primary);
+    padding: 15px;
+
+}
+
+.basic {
+    background-color: #F0E8DB;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-left: 4px solid var(--color-accent);
+    padding-left: 5px;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.basic code {
+    color: #514332;
+}
+
+.key-points { 
+    display: block;
+    padding: 20px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.key-points li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.key-points li::before {
+    content: "▸";
+    color: var(--color-text);
+    margin-right: 10px;
+}
+
+
+/*Voy a modificar la barra horizontal. Nuevas etiquetas: track es el fondo de la barra, thumb la parte móvil, y hover el color cuando pasa el cursor por encima*/
+.basic::-webkit-scrollbar {
+    height: 8px;
+}
+
+.basic::-webkit-scrollbar-track {
+    background: #E8DCC7;
+    border-radius: 10px;
+}
+
+.basic::-webkit-scrollbar-thumb {
+    background: #A89576;
+    border-radius: 10px;
+}
+
+.basic::-webkit-scrollbar-thumb:hover {
+    background: #66533F;
+}
+
+
+
