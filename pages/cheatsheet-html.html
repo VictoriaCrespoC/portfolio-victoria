@@ -18,7 +18,7 @@
     <main>
         <section class="HTML">
             <h1>HTML</h1>
-            <p>Guía rápida para escribir HTML moderno y semántico: estructura, meta, texto, enlaces, listas, multimedia, tablas, formularios, accesibilidad y buenas prácticas</p>
+            <p>Guía de referencia de HTML5 con ejemplos prácticos sobre estructura, etiquetas semánticas, texto, enlaces, listas, formularios y contenido multimedia.</p>
             <article>
               <h2>Estructura básica</h2>
               <div class="basic">
@@ -49,7 +49,7 @@
                 <li><strong>viewport</strong> para responsive.</li>          
               </ul>
             </article>
-            <article>
+            <article class="tarjetitas">
               <h2>Open Graph</h2>
               <p>Open Graph es un conjunto de metadatos que permite controlar cómo se presenta una página cuando se comparte en redes sociales.</p>
               <div class="basic">
@@ -64,6 +64,226 @@
              &lt;/body&gt;
         &lt;/html&gt;
                 </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Enlaces externos y scripts</h2>
+              <p>Permiten conectar el documento HTML con archivos externos, como hojas de estilos CSS y módulos JavaScript</p>
+              <div class="basic">
+                <pre><code>
+        &lt;head&gt;
+             &lt;!-- Hoja de estilos externa --&gt;
+             &lt;link rel="stylesheet" href="styles.css"&gt;
+
+             &lt;!-- Módulo JavaScript ES6 --&gt;
+             &lt;script type="module" src="./js/main.js"&gt;&lt;/script&gt;
+        &lt;/head&gt;
+                </code></pre>
+              </div>
+            </article>
+            <article class="tarjetitas">
+              <h2>Maquetación semántica (HTML5)</h2>
+              <p>Las etiquetas semánticas describen la función del contenido, mejorando la accesibilidad (A11y) y el posicionamiento en buscadores (SEO)</p>
+              <p>El &lt;body&gt; se divide en tres partes: &lt;header&gt;, &lt;main&gt; y &lt;footer&gt;</p>
+             
+              <h3>&lt;header&gt;</h3>
+              <p>Cabecera principal del sitio o de una sección</p>
+              <div class="basic">
+                <pre><code>
+        &lt;header&gt; &lt;
+             &lt;nav&gt; &lt;!-- Bloque de enlaces de navegación principal --&gt;
+                  &lt;a href="/"&gt;Inicio&lt;/a&gt;
+                  &lt;a href="/proyectos"&gt;Proyectos&lt;/a&gt;
+             &lt;/nav&gt;
+        &lt;/header&gt;
+                </code></pre>
+              </div>
+
+              <h3>&lt;main&gt;</h3>
+              <p>Contenido principal y único del documento</p>
+              <div class="basic">
+                <pre><code>
+        &lt;main&gt; &lt;
+             &lt;section&gt; &lt;!-- Agrupación temática de contenido --&gt;
+                  &lt;h2&gt;Sección Temática&lt;/h2&gt;
+                  &lt;p&gt;Contenido agrupado.&lt;/p&gt;
+             &lt;/section&gt;
+
+             &lt;article&gt; &lt;!-- Contenido independiente y reutilizable --&gt;
+                   &lt;h2&gt;Título del Artículo&lt;/h2&gt;
+                   &lt;p&gt;Texto del artículo.&lt;/p&gt;
+             &lt;/article&gt;
+
+             &lt;aside&gt; &lt;!-- Contenido secundario o relacionado --&gt;
+                   &lt;h3&gt;Relacionado&lt;/h3&gt;
+             &lt;/aside&gt;
+        &lt;/main&gt;
+                </code></pre>
+              </div>
+
+              <h3>&lt;footer&gt;</h3>
+              <p>Pie de página</p>
+              <div class="basic">
+                <pre><code>
+        &lt;footer&gt; &lt;
+             &lt;small&gt;© 2026 Mi Portfolio&lt;/small&gt;
+        &lt;/footer&gt;
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Encabezados y formato de texto</h2>
+              <p>Los encabezados organizan jerárquicamente el contenido, mientras que las etiquetas de formato permiten destacar la importancia y el énfasis del texto.</p>
+              <div class="basic">
+                <pre><code>
+        &lt;h1&gt;Título principal&lt;/h1&gt;
+        &lt;h2&gt;Título de sección&lt;/h2&gt;
+        &lt;h3&gt;Subsección&lt;/h3&gt;
+        &lt;h4&gt;Apartado&lt;/h4&gt;
+        &lt;h5&gt;Subapartado&lt;/h5&gt;
+        &lt;h6&gt;Nivel más específico&lt;/h6&gt;
+
+        &lt;p&gt;
+            Texto con &lt;strong&gt;importancia clave&lt;/strong&gt; y &lt;em&gt;énfasis&lt;/em&gt;.
+        &lt;/p&gt; 
+                </code></pre>
+              </div>
+              <p><em>Usa h1 una vez por página y respeta la jerarquía.</em></p>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Formularios y accesibilidad</h2>
+              <p>Los formularios permiten recoger información del usuario e interactuar con el servidor mediante diferentes campos de entrada.</p>
+              <div class="basic">
+                <pre><code>
+        &lt;form action="/enviar" method="POST"&gt;
+              &lt;!-- Campo de texto --&gt;
+              &lt;label for="username"&gt;Nombre de usuario:&lt;/label&gt;
+              &lt;input id="username" name="username" type="text" placeholder="Tu nombre" required&gt;
+
+              &lt;!-- Campo de correo electrónico --&gt;
+              &lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+              &lt;input id="email" name="email" type="email" required&gt;
+
+              &lt;!-- Campo numérico con límites --&gt;
+              &lt;label for="age"&gt;Edad:&lt;/label&gt;
+              &lt;input id="age" name="age" type="number" min="18" max="99"&gt;
+
+              &lt;!-- Menú desplegable --&gt;
+              &lt;label for="country"&gt;País:&lt;/label&gt;
+              &lt;select id="country" name="country"&gt;
+                    &lt;option value="es"&gt;España&lt;/option&gt;
+              &lt;/select&gt;
+
+              &lt;!-- Área de texto --&gt;
+              &lt;label for="msg"&gt;Mensaje:&lt;/label&gt;
+              &lt;textarea id="msg" name="msg" rows="4"&gt;&lt;/textarea&gt;
+
+              &lt;!-- Botón de envío --&gt;
+              &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+        &lt;/form&gt;
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Atributos globales y buenas prácticas</h2>
+              <p>Los atributos globales permiten identificar elementos, aplicar estilos, almacenar datos personalizados y mejorar la accesibilidad de los documentos HTML.</p>
+              
+              <h3>Identificador único: id</h3>
+              <div class="basic">
+                <pre><code>
+        &lt;section id="proyectos"&gt;
+              Contenido de la sección
+        &lt;/section&gt;
+                </code></pre>
+              </div>
+
+              <h3>Identificador reutilizable: class</h3>
+              <div class="basic">
+                <pre><code>
+        &lt;div class="card"&gt;Tarjeta 1&lt;/div&gt;
+        &lt;div class="card"&gt;Tarjeta 2&lt;/div&gt;
+                </code></pre>
+              </div>
+
+              <h3>Almacenamiento de datos personalizados (data)</h3>
+              <div class="basic">
+                <pre><code>
+        &lt;button data-plan="pro"&gt;Seleccionar plan&lt;/button&gt;
+                </code></pre>
+              </div>
+
+              <h3>Etiqueta accesible (aria-label)</h3>
+              <div class="basic">
+                <pre><code>
+        &lt;button aria-label="Cerrar menú"&gt;×&lt;/button&gt;
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Listas HTML</h2>
+              <p>Las listas permiten organizar y presentar información agrupada mediante elementos ordenados o desordenados.</p>
+              <div class="basic">
+                <pre><code>
+        &lt;!-- Lista desordenada --&gt;
+        &lt;ul&gt;
+               &lt;li&gt;HTML&lt;/li&gt;
+               &lt;li&gt;CSS&lt;/li&gt;
+               &lt;li&gt;JavaScript&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;!-- Lista ordenada --&gt;
+        &lt;ol&gt;
+               &lt;li&gt;Crear la estructura HTML&lt;/li&gt;
+               &lt;li&gt;Añadir los estilos CSS&lt;/li&gt;
+               &lt;li&gt;Incorporar JavaScript&lt;/li&gt;
+        &lt;/ol&gt;
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Imágenes y elementos multimedia</h2>
+              <p>HTML permite incorporar imágenes, audio, vídeo y contenido externo para enriquecer la experiencia del usuario.</p>
+              <div class="basic">
+                <pre><code>
+        &lt;!-- Imagen accesible --&gt;
+        &lt;img src="img/logo.png" alt="Logotipo de la web"&gt;
+
+        &lt;!-- Imagen con pie de foto --&gt;
+        &lt;figure&gt;
+               &lt;img src="foto.jpg" alt="Atardecer en la costa"&gt;
+               &lt;figcaption&gt;Atardecer en la costa.&lt;/figcaption&gt;
+        &lt;/figure&gt;
+
+        &lt;!-- Audio --&gt;
+        &lt;audio controls src="pista.mp3"&gt;&lt;/audio&gt;
+
+        &lt;!-- Vídeo --&gt;
+        &lt;video controls width="480" src="demo.mp4"&gt;&lt;/video&gt;
+
+        &lt;!-- Contenido externo incrustado --&gt;
+        &lt;iframe src="https://www.youtube.com/embed/ID"
+               title="Reproductor de vídeo"&gt;&lt;/iframe&gt;
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Mejores prácticas</h2>
+              <p>Recomendaciones para escribir código HTML limpio, accesible, seguro y optimizado.</p>
+              <div class="basic">
+                <ul class="key-points">
+                  <li><strong>HTML válido:</strong> utiliza una estructura correcta y una indentación consistente.</li>
+                  <li><strong>Accesibilidad:</strong> incluye atributos <code>alt</code> descriptivos en las imágenes.</li>
+                  <li><strong>Seguridad:</strong> utiliza <code>rel="noopener noreferrer"</code> en enlaces que abren pestañas nuevas.</li>
+                  <li><strong>Rendimiento:</strong> utiliza <code>loading="lazy"</code> en imágenes que no necesitan cargarse inmediatamente.</li>
+                  <li><strong>Validación:</strong> comprueba el código con herramientas como HTML Validator y revisa la accesibilidad.</li>
+              </ul>
               </div>
             </article>
           
