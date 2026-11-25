@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Portfolio de Victoria Crespo Cruz</title>
+    <meta name="description" content="Portfolio personal con proyectos de HTML, CSS y JavaScript.">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/skills.css">
+    <link rel="stylesheet" href="../css/cheatsheets.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main>
+        <section class="HTML">
+            <h1>CSS</h1>
+            <p>Guía práctica de CSS3 para diseñar páginas web: selectores, tipografía, colores, fondos, modelo de caja, posicionamiento, Flexbox, Grid, efectos visuales, animaciones y diseño responsive.</p>
+            <article class="tarjetitas">
+              <h2>Sintaxis y configuración inicial (Reset CSS)</h2>
+              <p class="htmlContext">CSS define la presentación visual de los documentos HTML mediante reglas formadas por selectores, propiedades y valores. Un reset permite establecer una base de estilos coherente entre navegadores.</p>
+              <div class="basic">
+                <pre><code>
+                    /* Selector universal */
+                * {
+                    box-sizing: border-box;
+                }
+
+                    /* Configuración general */
+                body {
+                    margin: 0;
+                    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+                    line-height: 1.5;
+                }
+
+                    /* Imágenes responsivas */
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                }
+
+                    /* Estilos de enlaces */
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+                </code></pre>
+              </div>
+              <p class="key-points"><em>El reset incluido establece una configuración inicial básica, que puede ampliarse utilizando un CSS Reset más completo para conseguir una mayor consistencia entre navegadores.</em></p>
+              
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Variables CSS (Custom Properties)</h2>
+                <div class="basic">
+                    <pre><code>
+                    /* Declaración de variables globales */
+                :root {
+                    --bg-primary: #ffffff;
+                    --text-main: #1a1a1a;
+                    --color-primary: #3a8de0;
+                    --color-muted: #f2f2f2;
+                }
+
+                    /* Uso de variables */
+                body {
+                    background-color: var(--bg-primary);
+                    color: var(--text-main);
+                }
+                   </code></pre>    
+                </div>
+                <p class="htmlContext"><em>Variables reutilizables para mantener una paleta de colores coherente en el documento.</em></p>
+                <h3>Tipografía y texto</h3>
+                <p class="htmlContext"><em>Propiedades básicas para definir fuentes, tamaño, grosor, interlineado y presentación del texto.</em></p>
+                <div class="basic">
+                    <pre><code>
+                body {
+                    font-family: "Lato", system-ui, sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: var(--text-main);
+                }
+
+                h1 {
+                    text-align: center;
+                    letter-spacing: 0.01em;
+                }
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Selectores, cascada y especificidad</h2>
+                <p class="htmlContext">La especificidad determina qué regla CSS prevalece cuando varias reglas afectan a un mismo elemento. Junto con el orden de la cascada, permite resolver conflictos entre estilos.</p>
+                <div class="basic">
+                    <pre><code>
+                     /* Conflicto de especificidad */
+                #app .btn {
+                     padding: 12px;
+                }
+                .btn {
+                     padding: 8px;
+                } 
+
+                     /* Selectores combinados */
+
+                /* Hijo directo */
+                .nav > a { }
+
+                /* Agrupación de selectores */
+                h1, h2, h3 { }
+
+                /* Pseudoclase */
+                button:disabled { }
+                      
+                     /* Selectores de atributos */
+                input[type="email"] { }
+                a[href^="https"] { }
+
+                     /* Pseudoclases estructurales */
+                li:first-child { }
+                tr:nth-child(even) { }
+
+                     /* Pseudoelementos */
+                p::first-line { }
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Modelo de caja y display</h2>
+                <p class="htmlContext">La especificidad determina qué regla CSS prevalece cuando varias reglas afectan a un mismo elemento. Junto con el orden de la cascada, permite resolver conflictos entre estilos.</p>
+                <div class="basic">
+                    <pre><code>
+                     /* Modelo de caja */
+                .card {
+                     margin: 16px;
+                     padding: 16px;
+                     border: 1px solid #ddd;
+                     border-radius: 12px;
+                     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+                     overflow: hidden;
+                }
+
+                     /* Contorno */
+                .input:focus {
+                     outline: 2px solid var(--accent);
+                     outline-offset: 2px;
+                }
+
+                     /* Comportamiento de display */
+                .oculto {
+                     display: none;
+                }
+
+                .block-el {
+                     display: block;
+                }
+
+                .inline-el {
+                     display: inline;
+                }
+
+                .inline-block-el {
+                     display: inline-block;
+                }
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Posicionamiento de elementos (position)</h2>
+                <p class="htmlContext">La propiedad -position- permite definir cómo se sitúa un elemento dentro del documento y establecer referencias para posicionar otros elementos.</p>
+                <div class="basic">
+                    <pre><code>
+                        /* Posicionamiento relativo */
+                .card-relative {
+                       position: relative;
+                }
+
+                       /* Posicionamiento absoluto */
+                .badge-absolute {
+                       position: absolute;
+                       top: 12px;
+                       right: 12px;
+                }
+
+                       /* Posicionamiento fijo */
+                .button-fixed {
+                       position: fixed;
+                       bottom: 16px;
+                       right: 16px;
+                       z-index: 999;
+                }
+
+                       /* Posicionamiento adhesivo */
+                .nav-sticky {
+                       position: sticky;
+                       top: 10px;
+                }
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Maquetación con Flexbox</h2>
+                <p class="htmlContext">Flexbox es un modelo de diseño unidimensional que permite distribuir, alinear y organizar elementos a lo largo de un eje principal y otro transversal.</p>
+                <div class="basic">
+                    <pre><code>
+                        /* Contenedor flexible */
+                .row {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 12px;
+                }
+
+                       /* Salto de línea y distribución adaptable */
+                .wrap-container {
+                       display: flex;
+                       flex-wrap: wrap;
+                       gap: 16px;
+                }
+
+                .wrap-container > .item {
+                       flex: 1 1 220px;     
+                }
+
+                       /* Centrado horizontal y vertical */
+                .center-box {
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       min-height: 200px;
+                }
+
+                        /* Desplazar un elemento hacia la derecha */
+                .push-right {
+                        margin-left: auto;
+                }
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Maquetación con CSS Grid</h2>
+                <p class="htmlContext">CSS Grid es un modelo de diseño bidimensional que permite organizar elementos en filas y columnas, facilitando la creación de estructuras y distribuciones complejas.</p>
+                <div class="basic">
+                    <pre><code>
+                        /* Grid adaptable */
+                .grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                        gap: 18px;
+                }
+
+                       /* Elementos del grid */
+                .card {
+                        background: var(--white);
+                        border: 1px solid var(--light);
+                        border-radius: 10px;
+                        padding: 18px;
+                }
+
+                       /* Distribución mediante áreas */
+                .layout {
+                        display: grid;
+                        grid-template-columns: 220px 1fr;
+                        grid-template-areas:
+                                  "sidebar main";
+                }
+
+                .sidebar {
+                        grid-area: sidebar;
+                }
+
+                .main {
+                        grid-area: main;
+                }
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Diseño responsivo (Mobile First y Media Queries)</h2>
+                <p class="htmlContext">El diseño responsivo permite adaptar la estructura y presentación de una página a diferentes tamaños de pantalla. El enfoque Mobile First establece primero los estilos para dispositivos móviles y utiliza media queries para introducir cambios en pantallas más grandes.</p>
+                <div class="basic">
+                    <pre><code>
+                        /* 1. Estilos base: Mobile First */
+                .container {
+                        width: 100%;
+                        padding: 0 16px;
+                }
+
+                .sidebar-layout {
+                        display: flex;
+                        flex-direction: column;
+                }
+
+                        /* 2. Adaptación para pantallas de 768px o más */
+                @media (min-width: 768px) {
+                       .container {
+                             max-width: 980px;
+                             margin: 0 auto;
+                       }
+
+                       .sidebar-layout {
+                             flex-direction: row;
+                             gap: 24px;
+                       }
+
+                       .sidebar-layout__main {
+                             flex: 1;
+                       }
+
+                       .sidebar-layout__aside {
+                             width: 280px;
+                       }
+                }
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2>Transiciones y animaciones CSS</h2>
+                <p class="htmlContext">Las transiciones y animaciones permiten crear efectos visuales y movimiento mediante CSS, sin necesidad de utilizar JavaScript para controlar cada cambio de estado.</p>
+                <div class="basic">
+                    <pre><code>
+                        /* Transiciones y transformaciones */
+                .card-hover {
+                        transform: translateY(0);
+                        transition: transform 200ms ease, box-shadow 200ms ease;
+                }
+
+                .card-hover:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                }
+
+                        /* Animaciones con @keyframes */
+                @keyframes fadeInUp {
+                        from {
+                             opacity: 0;
+                             transform: translateY(8px);
+                        }
+
+                        to {
+                             opacity: 1;
+                             transform: translateY(0);
+                        }
+                }
+
+                .modal.is-open {
+                        animation: fadeInUp 220ms ease forwards;
+                }                    
+                    </code></pre>
+                </div>
+            </article>
+
+            <article class="tarjetitas">
+                <h2 class="conclusionCSS">Buenas prácticas</h2>
+                <div class="basic">
+                <ul class="key-points">
+                    <li><strong>Especificidad:</strong> determina qué selector tiene prioridad cuando varias reglas afectan al mismo elemento.</li>
+                    <li><strong>Orden de prioridad:</strong> etiqueta y pseudoelemento, clase/atributo/pseudoclase e ID.</li>
+                    <li><strong>Clase:</strong> recomendable para aplicar estilos reutilizables.</li>
+                    <li><strong>ID:</strong> tiene alta especificidad; es preferible reservarlo para identificar elementos.</li>
+                    <li><strong>Combinadores:</strong> permiten seleccionar elementos según su relación: descendientes, hijos directos y hermanos.</li>
+                    <li><strong>Selectores de atributos:</strong> permiten seleccionar elementos según sus atributos y valores.</li>
+                    <li><strong>Pseudoclases:</strong> seleccionan elementos según su estado o posición.</li>
+                    <li><strong>Pseudoelementos:</strong> permiten aplicar estilos a partes concretas de un elemento.</li>
+                    <li><strong>Buenas prácticas:</strong> priorizar selectores sencillos y evitar el uso innecesario de ID y !important.</li>
+                </ul>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <div id="footer-container"></div>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+
+</html>

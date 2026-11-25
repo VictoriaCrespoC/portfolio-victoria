@@ -137,7 +137,6 @@
 .key-points { 
     display: block;
     padding: 20px;
-    margin-top: 15px;
     line-height: 1.6;
 }
 
@@ -200,3 +199,4 @@ em {
     font-style: italic;
     font-size: 0.95rem;
 }
+
