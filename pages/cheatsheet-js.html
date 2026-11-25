@@ -18,11 +18,335 @@
     <main>
       <section class="HTML">
             <h1>JavaScript</h1>
-            <p>Guía de referencia de JavaScript: sintaxis, tipos de datos, operadores, estructuras de control, funciones, estructuras de datos, manipulación del DOM, módulos, asincronía, almacenamiento y manejo de datos.</p>
+            <p class="htmlContext">Guía de referencia de JavaScript: sintaxis, tipos de datos, operadores, estructuras de control, funciones, estructuras de datos, manipulación del DOM, módulos, asincronía, almacenamiento y manejo de datos.</p>
             <article class="tarjetitas">
-              <h2>Estructura básica</h2>
+              <h2>Declaración de variables y Tipos de datos</h2>
+              <p class="htmlContext">En JavaScript moderno se prioriza la inmutabilidad y el alcance de bloque (block scope)</p>
               <div class="basic">
+                <pre><code>
+      // 1. Declaración de Variables
+       const nombre = "Data"; // Inmutable (no reasignable). Regla: usar por defecto.
+       let edad = 42;         // Mutable (reasignable). Usar solo si el valor cambiará.
+       // var antiguo = "evitar"; // Posee alcance de función (function scope), menos intuitivo.
+        
+       // 2. Tipos de Datos Primitivos y Especiales
+       const texto = "Hola";                   // String
+       const numero = 42;                      // Number (enteros y decimales)
+       const esActivo = true;                  // Boolean
+       let declaradaSinValor;                  // Undefined (variable declarada sin asignar) 
+       const vacio = null;                     // Null (ausencia intencional de valor) 
+
+       // Nota curiosa de depuración:
+       console.log(typeof null);               // Muestra "object" (curiosidad histórica del lenguaje).
+                </code></pre>
               </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Operadores y Comparación Estricta</h2>
+              <p class="htmlContext">Diferencia crucial entre igualdad débil e igualdad estricta para evitar errores sutiles de tipo</p>
+              <div class="basic">
+                <pre><code>
+       // Operadores Aritméticos y Asignación
+       let saldo = 100;
+       saldo += 50;  // Equivalente a: saldo = saldo + 50 (150)
+       const resto = 10 % 3; // Operador Módulo (devuelve el resto de la división: 1)
+
+       // Comparación: ¡Usa siempre comparación estricta!
+       5 == "5";  // true -> Igualdad débil (convierte los tipos antes de comparar, evitar).
+       5 === "5"; // false -> Igualdad estricta (compara VALOR y TIPO).
+       5 !== "5"; // true -> Desigualdad estricta.
+
+       // Operadores Lógicos
+       const puedeEntrar = (edad >= 18) && esActivo; // AND (&&): Ambos deben ser true.
+       const tieneDescuento = (edad &lt; 18) || !esActivo; // OR (||) y NOT (!).
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Funciones Tradicionales vs Arrow Functions (=>)</h2>
+              <p class="htmlContext">La sintaxis de función flecha introducida en ES6 simplifica los callbacks, pero cambia el comportamiento de -this-</p>
+              <div class="basic">
+                <pre><code>
+       // 1. Declaración Clásica (Function Declaration)
+       // Ideal cuando se requiere hoisting o cuando la función actúa como método con su propio 'this'.
+       function sumar(a, b) {
+               return a + b; // Devuelve un valor explícito
+       }
+
+       // 2. Arrow Function (Sintaxis base)
+       const multiplicar = (a, b) => {
+               return a * b; // Ámbito de bloque con return explícito
+       };
+
+       // 3. Return Implícito (Línea única)
+       const doble = n => n * 2; // Si hay 1 solo parámetro, los paréntesis son opcionales.
+       const crearObjeto = name => ({ name, role: "user" }); // Objetos con return implícito requieren ().
+
+       // Regla práctica de uso:
+       // - Usa 'function' para métodos de objeto/clase o funciones principales.
+       // - Usa '=>' para funciones cortas y callbacks (ej. en métodos de array).
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Arrays y Métodos de Iteración/Transformación</h2>
+              <p class="htmlContext">Un array es un tipo de objeto especial para almacenar colecciones ordenadas indexadas desde la posición 0. Es fundamental distinguir entre métodos que mutan el array original y métodos funcionales inmutables.</p>
+              <div class="basic">
+                <pre><code>
+       // 1. Declaración y Acceso
+       const colores = ["rojo", "verde", "azul"];
+       console.log(colores); // "rojo" 
+       console.log(colores.length); // 3
+
+       // 2. Métodos que MUTAN el array original (cambian la estructura)
+       colores.push("amarillo"); // Añade al final 
+       colores.pop();            // Elimina el último elemento
+       colores.unshift("negro"); // Añade al principio
+       colores.shift();          // Elimina el primer elemento
+
+       // 3. Métodos NO mutables (devuelven un nuevo valor o array)
+       const copia = colores.slice(0, 2); // Devuelve una copia o sub-array 
+       const existe = colores.includes("verde"); // true (comprueba si existe)
+
+       // 4. Métodos de Iteración / Programación Funcional (ES6+)
+       const numeros = [8-11]; 
+
+       // map(): Transforma cada elemento devolviendo un nuevo array del mismo tamaño
+       const dobles = numeros.map(n => n * 2); 
+
+       // filter(): Filtra elementos que cumplen una condición 
+       const pares = numeros.filter(n => n % 2 === 0); 
+
+       // find(): Devuelve el primer elemento que cumple la condición (o undefined) 
+       const primerMayorDos = numeros.find(n => n > 2); // 3 
+
+       // reduce(): Acumula los elementos en un único valor (sumas, contadores, objetos)
+       const sumaTotal = numeros.reduce((acc, n) => acc + n, 0); // 10 
+
+       // some() / every(): Devuelven un booleano si al menos uno o todos cumplen la condición
+       const tienePar = numeros.some(n => n % 2 === 0); // true
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Objetos y Métodos Estáticos de Object</h2>
+              <p class="htmlContext">Un objeto es una estructura fundamental basada en pares clave-valor que sirve para modelar entidades o mapas de datos.</p>
+              <div class="basic">
+                <pre><code>
+       // 1. Crear, Leer, Modificar y Borrar (CRUD básico de propiedades)
+       const usuario = {
+       id: 1, 
+       nombre: "Ana", 
+       rol: "admin"
+       };
+
+       // Leer propiedades (Notación de punto vs corchetes)
+       console.log(usuario.nombre); // "Ana" 
+       console.log(usuario["rol"]); // "rol" dinámico o con caracteres especiales 
+
+       // Actualizar y Añadir
+       usuario.nombre = "Ana María"; 
+       usuario.activo = true; 
+
+       // Eliminar propiedad
+       delete usuario.rol; 
+
+       // 2. Métodos estáticos de Object para inspección
+       const claves = Object.keys(usuario);   // ["id", "nombre", "activo"]
+       const valores = Object.values(usuario); // [1, "Ana María", true]
+       const parejas = Object.entries(usuario); // [["id", 1], ["nombre", "Ana María"], ...] 
+
+       // Fusionar objetos sin mutar
+       const perfilBase = { tema: "oscuro" }; 
+       const perfilCompleto = Object.assign({}, perfilBase, usuario); // Combina copias superficiales
+
+       // Congelar un objeto para impedir modificaciones
+       Object.freeze(perfilCompleto); // No se podrán añadir ni cambiar propiedades.
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Desestructuración (Destructuring), Spread / Rest y Bucles Avanzados</h2>
+              <p class="htmlContext">Sintaxis moderna de ES6+ para extraer datos y manipular colecciones de forma limpia e inmutable.</p>
+              <div class="basic">
+                <pre><code>
+       // 1. Object Destructuring (Extracción directa)
+       const cliente = { id: 10, nombre: "Carlos", ciudad: "Madrid" }; 
+
+       const { nombre, ciudad } = cliente; // Crea variables 'nombre' y 'ciudad' 
+       const { nombre: nombreCliente } = cliente; // Asigna un alias a la variable 
+       const { pais = "España" } = cliente; // Establece un valor por defecto si no existe 
+
+       // Destructuring directamente en parámetros de función (muy práctico)
+       const mostrarCliente = ({ nombre, ciudad }) => `${nombre} de ${ciudad}`;
+
+       // 2. Array Destructuring
+       const coordenadas = [40.4167, -3.7033];
+       const [latitud, longitud] = coordenadas; // Asignación por posición 
+       let [a, b] = [8, 9]; 
+       [a, b] = [b, a]; // Intercambio rápido de valores (Swap) 
+
+       // 3. Operador Spread (...) -> Copiar y Combinar sin Mutar
+       const arrA = [8, 9]; 
+       const arrB = [...arrA, 3, 4]; // -> Copia y añade elementos 
+
+       const objetoBase = { a: 1, b: 2 }; 
+       const objetoModificado = { ...objetoBase, b: 99, c: 3 }; // { a: 1, b: 99, c: 3 } (sobrescribe b) 
+
+       // 4. Operador Rest (...) -> Capturar el "resto" de propiedades o argumentos
+       const { c, ...restoObjeto } = objetoModificado; // restoObjeto contiene { a: 1, b: 99 } 
+       const sumarTodos = (...nums) => nums.reduce((acc, n) => acc + n, 0); // Parametros Rest en funciones
+
+       // 5. Bucles Modernos (for...of vs for...in)
+       const frutas = ["manzana", "pera"];
+       for (const fruta of frutas) {
+           console.log(fruta); // Iterar VALORES de arrays/iterables
+       }
+
+       for (const clave in cliente) {
+           console.log(clave, cliente[clave]); // Iterar CLAVES de objetos
+       }
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Selección y Manipulación del DOM</h2>
+              <p class="htmlContext">El Document Object Model (DOM) convierte la estructura HTML en un árbol de nodos manipulable desde JavaScript.</p>
+              <div class="basic">
+                <pre><code>
+       // 1. Selección de Elementos (Estándar recomendado)
+       const titulo = document.querySelector("#title"); // Primer elemento que coincide 
+       const tarjetas = document.querySelectorAll(".card"); // Devuelve una NodeList de todos los coincidentes
+       const botonUnico = document.getElementById("btn-submit"); // Selección directa por ID 
+
+       // 2. Leer y Modificar Contenido
+       titulo.textContent = "Nuevo Título Seguro"; // Inserta solo texto plano (previene XSS) 
+       // contenedor.innerHTML = "&lt;span&gt;Atención&lt;/span&gt;"; // Inserta HTML (usar con precaución) 
+
+       // 3. Crear, Insertar y Eliminar Nodos
+       const nuevoItem = document.createElement("li"); // Crea un nuevo nodo de elemento 
+       nuevoItem.textContent = "Habilidad dominada";
+
+       const lista = document.querySelector("#skills-list");
+       lista.append(nuevoItem); // Añade al final de la lista 
+       // lista.prepend(nuevoItem); // Añade al principio 
+       // nuevoItem.remove(); // Elimina el nodo del DOM 
+
+       // 4. Manipulación de Clases CSS (classList)
+       const caja = document.querySelector(".box");
+       caja.classList.add("active");      // Añade una clase 
+       caja.classList.remove("hidden");   // Elimina una clase
+       caja.classList.toggle("dark-mode");// Alterna la clase (interruptor)
+       const tieneEstilo = caja.classList.contains("active"); // Devuelve true/false
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Manejo de Eventos y Formularios</h2>
+              <p class="htmlContext">Los eventos permiten ejecutar código en respuesta a las acciones del usuario.</p>
+              <div class="basic">
+                <pre><code>
+       // 1. Asignar Event Listener
+       const boton = document.querySelector("#btn-action");
+
+       boton.addEventListener("click", (e) => {
+              console.log("Evento disparado en:", e.target); // Elemento concreto pulsado
+       });
+
+       // 2. Control de Formularios y Lectura de Valores
+       const formulario = document.querySelector("#login-form");
+       const inputEmail = document.querySelector("#email");
+
+       formulario.addEventListener("submit", (e) => {
+               e.preventDefault(); // Detiene el comportamiento por defecto (evita recargar la página) 
+  
+               const emailValor = inputEmail.value.trim(); // Obtiene el valor del input
+               console.log("Email enviado:", emailValor);
+  
+               inputEmail.value = ""; // Limpia el campo
+       });
+
+       // 3. Delegación de Eventos (Eficiente para listas dinámicas)
+       const contenedorLista = document.querySelector("#todos");
+
+       contenedorLista.addEventListener("click", (e) => {
+               // Comprueba si el clic fue en un botón con clase 'btn-delete'
+               if (e.target.matches("button.btn-delete")) {
+               e.target.closest("li").remove(); // Elimina el elemento padre &lt;li&gt;
+               }
+       });
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Módulos ES6 (import/export) y Estructura Modular</h2>
+              <p class="htmlContext">El sistema de módulos permite organizar el código en archivos independientes con responsabilidades delimitadas.</p>
+              <div class="basic">
+                <pre><code>
+       &lt;!-- En tu HTML: activar el soporte de módulos ES6 --&gt;
+       &lt;script type="module" src="./js/main.js"&gt;&lt;/script&gt;
+                </code></pre>
+              </div>
+              <div class="basic">
+                <pre><code>
+       // Archivo: js/utils/helpers.js (Exportaciones nombradas y por defecto)
+       export const formatearTexto = (str) => str.trim().toLowerCase(); // Exportación nombrada 
+
+       const renderMenu = () => { /* lógica del menú */ };
+       export default renderMenu; // Exportación por defecto
+
+       // Archivo: js/main.js (Punto de entrada)
+       import renderMenu, { formatearTexto } from "./utils/helpers.js"; // Importación 
+
+       renderMenu();
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Persistencia de Datos con LocalStorage y JSON</h2>
+              <p class="htmlContext"><strong>LocalStorage</strong> permite almacenar datos en el navegador sin fecha de expiración. Puesto que solo guarda texto (strings), se requiere serializar con <strong>JSON</strong> para guardar objetos o arrays</p>
+              <div class="basic">
+                <pre><code>
+       // 1. Guardar y Leer Datos Primitivos
+       localStorage.setItem("theme", "dark"); // Almacena par clave-valor
+       const temaGuardado = localStorage.getItem("theme"); // Recupera valor ("dark" o null) 
+       localStorage.removeItem("theme"); // Elimina la clave
+       // localStorage.clear(); // Limpia todo el almacenamiento local
+
+       // 2. Guardar y Leer Objetos / Arrays (Patrón CRUD persistente)
+       const tareas = [
+            { id: 1, texto: "Revisar HTML", completada: true },
+            { id: 2, texto: "Estudiar JS", completada: false }
+       ];
+
+       // Guardar: Convertir objeto/array a String JSON 
+       localStorage.setItem("mis_tareas", JSON.stringify(tareas));
+
+       // Leer: Convertir String JSON de nuevo a objeto/array (con valor por defecto) 
+       const tareasEnMemoria = JSON.parse(localStorage.getItem("mis_tareas")) 
+                </code></pre>
+              </div>
+            </article>
+
+            <article class="tarjetitas">
+              <h2>Buenas prácticas</h2>
+              <ul class="key-points">
+                <li><strong>Declaración de variables: </strong>priorizar <strong>const</strong> y utilizar <strong>let</strong> cuando haya reasignación.</li>
+                <li><strong>Comparaciones: </strong>utilizar igualdad estricta <strong>(=== </strong>y <strong>!==)</strong>.</li>
+                <li><strong>Inmutabilidad: </strong>evitar modificar arrays y objetos originales cuando no sea necesario; utilizar map(), filter(), spread, etc.</li>
+                <li><strong>Funciones: </strong>utilizar funciones flecha para callbacks y funciones tradicionales cuando convenga conservar su propio <strong>this</strong></li>
+                <li><strong>Manipulación del DOM: </strong>priorizar <strong>textContent</strong> frente a <strong>innerHTML</strong> cuando se inserta texto.</li>
+                <li><strong>Organización y persistencia: </strong>modularizar el código y utilizar JSON para almacenar estructuras de datos en LocalStorage.</li>
+              </ul>
             </article>
         </section>
 

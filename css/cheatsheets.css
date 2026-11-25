@@ -200,3 +200,6 @@ em {
     font-size: 0.95rem;
 }
 
+strong {
+    font-weight: bold;
+}

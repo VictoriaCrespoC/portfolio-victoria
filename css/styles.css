@@ -41,6 +41,7 @@ body{
   flex-direction: column;
   line-height: 1.6;
   min-height: 100vh;
+  margin: 0;
 }
 
 nav{
@@ -243,11 +244,21 @@ section p{
 
 
 /*FOOTER*/
+#footer-container {
+  width: 100%;
+  background-color: var(--color-text);
+}
 
 footer{
   background-color: var(--color-text);
+  top: 0;
+  left: 0;
+  width: 100%;
   height: auto;
+  z-index: 1000;
+  margin: 0;
 }
+
 
 article a{
   display:flex; 
