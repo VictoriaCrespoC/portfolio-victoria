@@ -19,7 +19,7 @@
         <section class="HTML">
             <h1>HTML</h1>
             <p>Guía de referencia de HTML5 con ejemplos prácticos sobre estructura, etiquetas semánticas, texto, enlaces, listas, formularios y contenido multimedia.</p>
-            <article>
+            <article class="tarjetitas">
               <h2>Estructura básica</h2>
               <div class="basic">
                 <pre><code>
@@ -44,14 +44,14 @@
                 </code></pre>
               </div>
               <ul class="key-points">
-                <li><strong>DOCTYPE</strong> primero.</li>
-                <li><strong>meta charset</strong> lo más arriba posible.</li>
-                <li><strong>viewport</strong> para responsive.</li>          
+                <li><strong>DOCTYPE</strong> indica al navegador que el documento utiliza HTML5 y permite interpretarlo en modo estándar.</li>
+                <li><strong>meta charset</strong> establece la codificación de caracteres para mostrar correctamente letras, tildes y símbolos.</li>
+                <li><strong>viewport</strong> adapta la escala y el ancho de la página al dispositivo para facilitar el diseño responsive.</li>          
               </ul>
             </article>
             <article class="tarjetitas">
               <h2>Open Graph</h2>
-              <p>Open Graph es un conjunto de metadatos que permite controlar cómo se presenta una página cuando se comparte en redes sociales.</p>
+              <p class="htmlContext">Open Graph es un conjunto de metadatos que permite controlar cómo se presenta una página cuando se comparte en redes sociales.</p>
               <div class="basic">
                 <pre><code>
                  &lt;!-- <em>Open Graph: previsualización en redes sociales</em> --&gt;
@@ -69,7 +69,7 @@
 
             <article class="tarjetitas">
               <h2>Enlaces externos y scripts</h2>
-              <p>Permiten conectar el documento HTML con archivos externos, como hojas de estilos CSS y módulos JavaScript</p>
+              <p class="htmlContext">Permiten conectar el documento HTML con archivos externos, como hojas de estilos CSS y módulos JavaScript</p>
               <div class="basic">
                 <pre><code>
         &lt;head&gt;
@@ -84,11 +84,11 @@
             </article>
             <article class="tarjetitas">
               <h2>Maquetación semántica (HTML5)</h2>
-              <p>Las etiquetas semánticas describen la función del contenido, mejorando la accesibilidad (A11y) y el posicionamiento en buscadores (SEO)</p>
-              <p>El &lt;body&gt; se divide en tres partes: &lt;header&gt;, &lt;main&gt; y &lt;footer&gt;</p>
+              <p class="htmlContext">Las etiquetas semánticas describen la función del contenido, mejorando la accesibilidad (A11y) y el posicionamiento en buscadores (SEO)</p>
+              <p class="htmlContext">El &lt;body&gt; se divide en tres partes: &lt;header&gt;, &lt;main&gt; y &lt;footer&gt;</p>
              
               <h3>&lt;header&gt;</h3>
-              <p>Cabecera principal del sitio o de una sección</p>
+              <p class="htmlContext">Cabecera principal del sitio o de una sección</p>
               <div class="basic">
                 <pre><code>
         &lt;header&gt; &lt;
@@ -101,7 +101,7 @@
               </div>
 
               <h3>&lt;main&gt;</h3>
-              <p>Contenido principal y único del documento</p>
+              <p class="htmlContext">Contenido principal y único del documento</p>
               <div class="basic">
                 <pre><code>
         &lt;main&gt; &lt;
@@ -123,7 +123,7 @@
               </div>
 
               <h3>&lt;footer&gt;</h3>
-              <p>Pie de página</p>
+              <p class="htmlContext">Pie de página</p>
               <div class="basic">
                 <pre><code>
         &lt;footer&gt; &lt;
@@ -135,7 +135,7 @@
 
             <article class="tarjetitas">
               <h2>Encabezados y formato de texto</h2>
-              <p>Los encabezados organizan jerárquicamente el contenido, mientras que las etiquetas de formato permiten destacar la importancia y el énfasis del texto.</p>
+              <p class="htmlContext">Los encabezados organizan jerárquicamente el contenido, mientras que las etiquetas de formato permiten destacar la importancia y el énfasis del texto.</p>
               <div class="basic">
                 <pre><code>
         &lt;h1&gt;Título principal&lt;/h1&gt;
@@ -150,12 +150,12 @@
         &lt;/p&gt; 
                 </code></pre>
               </div>
-              <p><em>Usa h1 una vez por página y respeta la jerarquía.</em></p>
+              <p class="htmlContext"><em>Usa h1 una vez por página y respeta la jerarquía.</em></p>
             </article>
 
             <article class="tarjetitas">
               <h2>Formularios y accesibilidad</h2>
-              <p>Los formularios permiten recoger información del usuario e interactuar con el servidor mediante diferentes campos de entrada.</p>
+              <p class="htmlContext">Los formularios permiten recoger información del usuario e interactuar con el servidor mediante diferentes campos de entrada.</p>
               <div class="basic">
                 <pre><code>
         &lt;form action="/enviar" method="POST"&gt;
@@ -190,7 +190,7 @@
 
             <article class="tarjetitas">
               <h2>Atributos globales y buenas prácticas</h2>
-              <p>Los atributos globales permiten identificar elementos, aplicar estilos, almacenar datos personalizados y mejorar la accesibilidad de los documentos HTML.</p>
+              <p class="htmlContext">Los atributos globales permiten identificar elementos, aplicar estilos, almacenar datos personalizados y mejorar la accesibilidad de los documentos HTML.</p>
               
               <h3>Identificador único: id</h3>
               <div class="basic">
@@ -226,7 +226,7 @@
 
             <article class="tarjetitas">
               <h2>Listas HTML</h2>
-              <p>Las listas permiten organizar y presentar información agrupada mediante elementos ordenados o desordenados.</p>
+              <p class="htmlContext">Las listas permiten organizar y presentar información agrupada mediante elementos ordenados o desordenados.</p>
               <div class="basic">
                 <pre><code>
         &lt;!-- Lista desordenada --&gt;
@@ -248,7 +248,7 @@
 
             <article class="tarjetitas">
               <h2>Imágenes y elementos multimedia</h2>
-              <p>HTML permite incorporar imágenes, audio, vídeo y contenido externo para enriquecer la experiencia del usuario.</p>
+              <p class="htmlContext">HTML permite incorporar imágenes, audio, vídeo y contenido externo para enriquecer la experiencia del usuario.</p>
               <div class="basic">
                 <pre><code>
         &lt;!-- Imagen accesible --&gt;
@@ -275,7 +275,7 @@
 
             <article class="tarjetitas">
               <h2>Mejores prácticas</h2>
-              <p>Recomendaciones para escribir código HTML limpio, accesible, seguro y optimizado.</p>
+              <p class="htmlContext">Recomendaciones para escribir código HTML limpio, accesible, seguro y optimizado.</p>
               <div class="basic">
                 <ul class="key-points">
                   <li><strong>HTML válido:</strong> utiliza una estructura correcta y una indentación consistente.</li>

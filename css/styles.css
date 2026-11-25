@@ -76,7 +76,7 @@ nav{
   transform: scale(1.15) translate(3px, -3px);
 }
 
-ul{
+.nav ul{
   display:flex;
   justify-content: center;
   align-items: center;

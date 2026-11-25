@@ -216,3 +216,15 @@ body.darkmode .skill-tag{
 body.darkmode .cheat-card{
   background-color: #403426;
 }
+
+body.darkmode .htmlContext {
+  color:#211D18;
+}
+
+body.darkmode .tarjetitas h3 {
+  color: #565d31;
+}
+
+body.darkmode .key-points {
+  color:#211D18;
+}

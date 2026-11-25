@@ -150,6 +150,13 @@
     content: "▸";
     color: var(--color-text);
     margin-right: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.key-points li strong {
+    font-weight: 700;
 }
 
 /*Voy a modificar la barra horizontal. Nuevas etiquetas: track es el fondo de la barra, thumb la parte móvil, y hover el color cuando pasa el cursor por encima*/
@@ -181,11 +188,15 @@
 .tarjetitas p{
     padding-left: 15px;
     padding-right: 15px;
-    font-size: medium;
+    font-size: 1rem;
 }
 
 .tarjetitas h3 {
-    padding: 15px;
+    padding: 10px;
     color: #565d31;
 }
 
+em {
+    font-style: italic;
+    font-size: 0.95rem;
+}
