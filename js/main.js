@@ -6,6 +6,10 @@ import {header, footer} from "./templates/template.js"
 document.getElementById("header-container").innerHTML = header;
 document.getElementById("footer-container").innerHTML = footer;
 
+import {html, css, js} from "./templates/template.js"
+document.getElementById("html-header").innerHTML = html;
+document.getElementById("css-header").innerHTML = css;
+document.getElementById("js-header").innerHTML = js;
 
 //Primero se insertan los elementos del HTML y después se llama al menuhamburguesa y al darkmode, si no js no lo encuentra
 menuHamburguesa();

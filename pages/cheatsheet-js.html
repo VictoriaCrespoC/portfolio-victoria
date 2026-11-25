@@ -16,6 +16,8 @@
   <body>
     <div id="header-container"></div>
     <main>
+      <div id="js-header"></div>
+      <div class="main">
       <section class="HTML">
             <h1>JavaScript</h1>
             <p>Guía de referencia de JavaScript: sintaxis, tipos de datos, operadores, estructuras de control, funciones, estructuras de datos, manipulación del DOM, módulos, asincronía, almacenamiento y manejo de datos.</p>
@@ -42,7 +44,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="operaciones">
               <h2>Operadores y Comparación Estricta</h2>
               <p class="htmlContext">Diferencia crucial entre igualdad débil e igualdad estricta para evitar errores sutiles de tipo</p>
               <div class="basic">
@@ -64,7 +66,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="arrowFunction">
               <h2>Funciones Tradicionales vs Arrow Functions (=>)</h2>
               <p class="htmlContext">La sintaxis de función flecha introducida en ES6 simplifica los callbacks, pero cambia el comportamiento de -this-</p>
               <div class="basic">
@@ -91,7 +93,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="arrays">
               <h2>Arrays y Métodos de Iteración/Transformación</h2>
               <p class="htmlContext">Un array es un tipo de objeto especial para almacenar colecciones ordenadas indexadas desde la posición 0. Es fundamental distinguir entre métodos que mutan el array original y métodos funcionales inmutables.</p>
               <div class="basic">
@@ -132,7 +134,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="objetos">
               <h2>Objetos y Métodos Estáticos de Object</h2>
               <p class="htmlContext">Un objeto es una estructura fundamental basada en pares clave-valor que sirve para modelar entidades o mapas de datos.</p>
               <div class="basic">
@@ -170,7 +172,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="destructuring">
               <h2>Desestructuración (Destructuring), Spread / Rest y Bucles Avanzados</h2>
               <p class="htmlContext">Sintaxis moderna de ES6+ para extraer datos y manipular colecciones de forma limpia e inmutable.</p>
               <div class="basic">
@@ -215,7 +217,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="DOM">
               <h2>Selección y Manipulación del DOM</h2>
               <p class="htmlContext">El Document Object Model (DOM) convierte la estructura HTML en un árbol de nodos manipulable desde JavaScript.</p>
               <div class="basic">
@@ -248,7 +250,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="addEventListener">
               <h2>Manejo de Eventos y Formularios</h2>
               <p class="htmlContext">Los eventos permiten ejecutar código en respuesta a las acciones del usuario.</p>
               <div class="basic">
@@ -286,7 +288,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="ES6">
               <h2>Módulos ES6 (import/export) y Estructura Modular</h2>
               <p class="htmlContext">El sistema de módulos permite organizar el código en archivos independientes con responsabilidades delimitadas.</p>
               <div class="basic">
@@ -311,7 +313,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="persistencia">
               <h2>Persistencia de Datos con LocalStorage y JSON</h2>
               <p class="htmlContext"><strong>LocalStorage</strong> permite almacenar datos en el navegador sin fecha de expiración. Puesto que solo guarda texto (strings), se requiere serializar con <strong>JSON</strong> para guardar objetos o arrays</p>
               <div class="basic">
@@ -337,7 +339,7 @@
               </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="jsConclusion">
               <h2>Buenas prácticas</h2>
               <div class="basic">
               <ul class="key-points">
@@ -351,6 +353,12 @@
               </div>
             </article>
         </section>
+        <nav class="cheatsheet-cambio" aria-label="Navegación entre cheatsheets">
+             <a href="cheatsheet-html.html">HTML5</a>
+             <a href="cheatsheet-css.html">CSS3</a>
+             <a href="cheatsheet-js.html" class="active" aria-current="page">JavaScript</a>
+        </nav>
+        </div>
 
     </main>
     <div id="footer-container"></div>

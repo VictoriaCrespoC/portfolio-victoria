@@ -61,3 +61,51 @@ export const footer = `
       
       <p class="text-footer">&copy; 2026 Victoria Crespo Cruz - Embryologist & Full Stack Developer</p>
     </footer>`;
+
+    export const html = `
+    <nav class="cheatsheet-nav" aria-label="cheatsheet-nav">
+      <ul>
+        <li><a href="#estructure">Estructura</a></li>
+        <li><a href="#openGraph">openGraph</a></li>
+        <li><a href="#scripts">Enlaces</a></li>
+        <li><a href="#maquetaacion">Maquetación</a></li>
+        <li><a href="#titles">Encabezados</a></li>
+        <li><a href="#formularies">Formularios</a></li>
+        <li><a href="#atributos">Atributos</a></li>
+        <li><a href="#listas">Listas</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#htmlConclusion">Buenas prácticas</a></li>
+      </ul>
+    </nav>`;
+
+    export const css =`
+    <nav class="cheatsheet-nav" aria-label="cheatsheet-nav">
+      <ul>
+        <li><a href="#reset">reset</a></li>
+        <li><a href="#customProperties">customProperties</a></li>
+        <li><a href="#selectors">selectores</a></li>
+        <li><a href="#display">display</a></li>
+        <li><a href="#position">position</a></li>
+        <li><a href="#flexbox">flexbox</a></li>
+        <li><a href="#cssGrid">cssGrid</a></li>
+        <li><a href="#mediaQueries">MediaQueries</a></li>
+        <li><a href="#animaciones">animaciones</a></li>
+        <li><a href="#cssConclusion">Buenas prácticas</a></li>
+      </ul>
+    </nav>`
+
+    export const js =`
+    <nav class="cheatsheet-nav" aria-label="cheatsheet-nav">
+      <ul>
+        <li><a href="#operaciones">Operaciones</a></li>
+        <li><a href="#arrowFunction">Funciones</a></li>
+        <li><a href="#arrays">Arrays</a></li>
+        <li><a href="#objetos">Objetos</a></li>
+        <li><a href="#destructuring">Destructuring</a></li>
+        <li><a href="#DOM">DOM</a></li>
+        <li><a href="#addEventListener">addEventListener</a></li>
+        <li><a href="#ES6">Módulo ES6</a></li>
+        <li><a href="#persistencia">persistencia</a></li>
+        <li><a href="#jsConclusion">Buenas prácticas</a></li>
+      </ul>
+    </nav>`

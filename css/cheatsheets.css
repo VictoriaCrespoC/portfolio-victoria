@@ -203,3 +203,95 @@ em {
 strong {
     font-weight: bold;
 }
+
+/*Menu nav cheatsheets*/
+#html-header {
+    width: 100%;
+    background-color: var(--color-background);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+.cheatsheet-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 0.5;
+    margin: 10px;
+    font-size: 0.5rem;
+    
+    }
+
+.cheatsheet-nav ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding-right: 15px 20px;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+}
+
+.cheatsheet-nav a {
+    display: inline-block;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    transition: color 0.2s ease;
+}
+
+.cheatsheet-nav a:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    .cheatsheet-nav {
+        display: none;
+    }
+}
+
+
+/*boton para cambiar de un cheatsheet a otro*/
+.cheatsheet-cambio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px;
+    margin: 10px auto;
+}
+
+.cheatsheet-cambio a {
+    display: inline-block;
+    padding: 12px 30px;
+    min-width: 130px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    font-weight: var(--font-weight-bold);
+    transition: all 0.25s ease;
+}
+
+.cheatsheet-cambio a.active {
+    background-color: var(--color-accent);
+    color: white;
+    border-color: var(--color-secondary);
+}
+
+.cheatsheet-cambio a:hover {
+    background-color: white;
+    color: var(--color-primary);
+    box-shadow: 0 4px 10px rgba(120, 85, 50, 0.25);
+    transform: translateY(-2px);
+}

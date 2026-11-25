@@ -42,20 +42,21 @@ body{
   line-height: 1.6;
   min-height: 100vh;
   margin: 0;
-}
+  }
 
-nav{
+.header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
-  padding: 10px 10px;
+  padding: 10px;
+  box-sizing: border-box;
   background-color: var(--color-background);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   border-bottom: #B49A78;
   box-shadow: var(--box-shadow);
 }
@@ -177,7 +178,7 @@ footer ul{
 
 /*MAIN*/
 
-main{
+.main{
   padding: var(--spacing-main);
   flex: 1;
   margin-top: var(--header-height);  

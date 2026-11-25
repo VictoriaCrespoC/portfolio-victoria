@@ -16,10 +16,12 @@
   <body>
     <div id="header-container"></div>
     <main>
-        <section class="HTML">
+        <div id="css-header"></div>
+        <div class="main">
+            <section class="HTML">
             <h1>CSS</h1>
             <p>Guía práctica de CSS3 para diseñar páginas web: selectores, tipografía, colores, fondos, modelo de caja, posicionamiento, Flexbox, Grid, efectos visuales, animaciones y diseño responsive.</p>
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="reset">
               <h2>Sintaxis y configuración inicial (Reset CSS)</h2>
               <p class="htmlContext">CSS define la presentación visual de los documentos HTML mediante reglas formadas por selectores, propiedades y valores. Un reset permite establecer una base de estilos coherente entre navegadores.</p>
               <div class="basic">
@@ -54,7 +56,7 @@
               
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="customProperties">
                 <h2>Variables CSS (Custom Properties)</h2>
                 <div class="basic">
                     <pre><code>
@@ -94,7 +96,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="selectors">
                 <h2>Selectores, cascada y especificidad</h2>
                 <p class="htmlContext">La especificidad determina qué regla CSS prevalece cuando varias reglas afectan a un mismo elemento. Junto con el orden de la cascada, permite resolver conflictos entre estilos.</p>
                 <div class="basic">
@@ -132,7 +134,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="display">
                 <h2>Modelo de caja y display</h2>
                 <p class="htmlContext">La especificidad determina qué regla CSS prevalece cuando varias reglas afectan a un mismo elemento. Junto con el orden de la cascada, permite resolver conflictos entre estilos.</p>
                 <div class="basic">
@@ -173,7 +175,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="position">
                 <h2>Posicionamiento de elementos (position)</h2>
                 <p class="htmlContext">La propiedad -position- permite definir cómo se sitúa un elemento dentro del documento y establecer referencias para posicionar otros elementos.</p>
                 <div class="basic">
@@ -207,7 +209,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="flexbox">
                 <h2>Maquetación con Flexbox</h2>
                 <p class="htmlContext">Flexbox es un modelo de diseño unidimensional que permite distribuir, alinear y organizar elementos a lo largo de un eje principal y otro transversal.</p>
                 <div class="basic">
@@ -248,7 +250,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="cssGrid">
                 <h2>Maquetación con CSS Grid</h2>
                 <p class="htmlContext">CSS Grid es un modelo de diseño bidimensional que permite organizar elementos en filas y columnas, facilitando la creación de estructuras y distribuciones complejas.</p>
                 <div class="basic">
@@ -287,7 +289,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="mediaQueries">
                 <h2>Diseño responsivo (Mobile First y Media Queries)</h2>
                 <p class="htmlContext">El diseño responsivo permite adaptar la estructura y presentación de una página a diferentes tamaños de pantalla. El enfoque Mobile First establece primero los estilos para dispositivos móviles y utiliza media queries para introducir cambios en pantallas más grandes.</p>
                 <div class="basic">
@@ -327,7 +329,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="animaciones">
                 <h2>Transiciones y animaciones CSS</h2>
                 <p class="htmlContext">Las transiciones y animaciones permiten crear efectos visuales y movimiento mediante CSS, sin necesidad de utilizar JavaScript para controlar cada cambio de estado.</p>
                 <div class="basic">
@@ -363,7 +365,7 @@
                 </div>
             </article>
 
-            <article class="tarjetitas">
+            <article class="tarjetitas" id="cssConclusion">
                 <h2 class="conclusionCSS">Buenas prácticas</h2>
                 <div class="basic">
                 <ul class="key-points">
@@ -380,7 +382,12 @@
                 </div>
             </article>
         </section>
-
+        <nav class="cheatsheet-cambio" aria-label="Navegación entre cheatsheets">
+             <a href="cheatsheet-html.html">HTML5</a>
+             <a href="cheatsheet-css.html" class="active" aria-current="page">CSS3</a>
+             <a href="cheatsheet-js.html">JavaScript</a>
+        </nav>
+        </div>
     </main>
     <div id="footer-container"></div>
     <script type="module" src="../js/main.js"></script>
