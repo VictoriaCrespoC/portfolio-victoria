@@ -209,11 +209,14 @@ strong {
     background-color: var(--color-background);
     height: var(--header-height);
     position: sticky;
-    top: 0;
+    top: var(--header-height);
     width: 100%;
     z-index: 999;
     box-shadow: var(--box-shadow);
+
+    margin: 0;
 }
+
 .cheatsheet-nav {
     display: flex;
     justify-content: space-around;
