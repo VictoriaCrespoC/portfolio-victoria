@@ -178,7 +178,7 @@ footer ul{
 
 /*MAIN*/
 
-.main{
+main{
   padding: var(--spacing-main);
   flex: 1;
   margin-top: var(--header-height);  
