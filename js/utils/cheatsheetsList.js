@@ -4,6 +4,9 @@ import cheats from "../data/cheatsheets.js";
 
 export default function cheatsheetsList () {
     const cheatsheetsContainer = document.querySelector("#cheatsheets-container");
+    // Si no existe el contenedor en la página actual, salimos de la función sin hacer nada
+    if (!cheatsheetsContainer) return;
+    
     //ahora recorremos el array creado en cheatsheet
     const cheatCard = cheats.map((cheat)=> {
         return `

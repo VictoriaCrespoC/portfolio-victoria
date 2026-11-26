@@ -2,6 +2,10 @@ import skills from "../data/skills.js"; //Se usa ../ porque skillsList está en 
 
 export default function skillsList () {
     const skillsContainer = document.querySelector("#skills-container"); //variable que almacena el HTML de una tarjeta
+   
+    // Si no existe el contenedor en la página actual, salimos de la función sin hacer nada
+    if (!skillsContainer) return;
+
     skills.forEach((skill) => {
         const skillTags = skill.tags.map((tag) => {
             return `<span class="skill-tag">${tag}</span>`
@@ -18,4 +22,4 @@ export default function skillsList () {
 
         skillsContainer.innerHTML += skillCard; //me permite añadir tarjetas sin borrar las anteriroes
     });
-}
+};
