@@ -205,9 +205,38 @@ strong {
 }
 
 /*Menu nav cheatsheets*/
+@media screen and (max-width: 768px) {
+    #js-header, #css-header, #html-header {
+        display: none;
+    }
+}
+
+
 #html-header {
     background-color: var(--color-background);
-    height: var(--header-height);
+    height: auto;
+    position: sticky;
+    top: var(--header-height);
+    width: 100%;
+    z-index: 999;
+    box-shadow: var(--box-shadow);
+
+    margin: 0;
+}
+#css-header {
+    background-color: var(--color-background);
+    height: auto;
+    position: sticky;
+    top: var(--header-height);
+    width: 100%;
+    z-index: 999;
+    box-shadow: var(--box-shadow);
+
+    margin: 0;
+}
+#js-header {
+    background-color: var(--color-background);
+    height: auto;
     position: sticky;
     top: var(--header-height);
     width: 100%;
@@ -232,7 +261,7 @@ strong {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     margin: 0;
     padding-right: 15px 20px;
     font-size: var(--font-size-base);
@@ -247,17 +276,15 @@ strong {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     transition: color 0.2s ease;
+    padding: 7px;
 }
 
 .cheatsheet-nav a:hover {
     color: var(--color-accent);
 }
 
-@media (max-width: 768px) {
-    .cheatsheet-nav {
-        display: none;
-    }
-}
+
+
 
 
 /*boton para cambiar de un cheatsheet a otro*/
