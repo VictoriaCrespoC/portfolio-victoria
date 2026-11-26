@@ -63,7 +63,7 @@ export const footer = `
     </footer>`;
 
     export const html = `
-    <nav class="cheatsheet-nav" aria-label="cheatsheet-nav">
+    <div class="cheatsheet-nav">
       <ul>
         <li><a href="#estructure">Estructura</a></li>
         <li><a href="#openGraph">openGraph</a></li>
@@ -76,7 +76,7 @@ export const footer = `
         <li><a href="#multimedia">Multimedia</a></li>
         <li><a href="#htmlConclusion">Buenas prácticas</a></li>
       </ul>
-    </nav>`;
+    </div>`;
 
     export const css =`
     <nav class="cheatsheet-nav" aria-label="cheatsheet-nav">
