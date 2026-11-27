@@ -13,7 +13,7 @@ export const header = `
                 <a href="../index.html#cheatsheets">Cheatsheets</a>
             </li>
             <li class="menu">
-                <a href="#">Recursos</a>
+                <a href="../pages/recursos.html">Recursos</a>
             </li>
             <li class="menu contacto">
                 <a href="../pages/contacto.html">Contacto</a>

@@ -253,6 +253,7 @@ strong {
     line-height: 0.5;
     margin: 10px;
     font-size: 0.5rem;
+    box-sizing: border-box;
     
     }
 

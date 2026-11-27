@@ -213,13 +213,35 @@ body.darkmode .skill-tag{
 }
 
 /*DARKMODE DE CHEATSHEETS*/
+body.darkmode .cheatsheet-nav {
+  background-color: var(--dark-accent);
+  border-color: var(--dark-accent);
+}
+
 body.darkmode .cheat-card{
   background-color: #403426;
+}
+body.darkmode .basic{
+  background-color: color-mix(in srgb, var(--dark-secondary), var(--dark-background) 80%);
+}
+
+body.darkmode .tarjetitas{
+  background-color: color-mix(in srgb, var(--dark-secondary), var(--dark-background) 90%);
+}
+body.darkmode .tarjetitas h2{
+  color: var(--dark-accent);
+}
+body.darkmode .tarjetitas p, body.darkmode .tarjetitas .key-points{
+  color: var(--dark-text);
+}
+body.darkmode .tarjetitas pre, body.darkmode .tarjetitas code {
+    color: var(--dark-text);
 }
 
 body.darkmode .htmlContext {
   color:#211D18;
 }
+
 
 body.darkmode .tarjetitas h3 {
   color: #565d31;
@@ -227,4 +249,34 @@ body.darkmode .tarjetitas h3 {
 
 body.darkmode .key-points {
   color:#211D18;
+}
+
+body.darkmode .cheatsheet-cambio {
+  background-color: transparent;
+  border: transparent;
+  box-shadow: none;
+}
+
+
+/*DARKMODE DE RECURSOS*/
+body.darkmode .resource-card { 
+  background-color: color-mix(in srgb, var(--dark-background), var(--color-beige) 10%);
+  border-left: 5px solid var(--color-accent);
+}
+.resources-tabs ul {
+    background-color:  color-mix(in srgb, var(--color-background), transparent 80%);
+}
+
+body.darkmode .resource-card:hover { 
+  border-left: 5px solid var(--color-hero);
+  background-color: color-mix(in srgb, var(--dark-background), var(--color-beige) 20%);
+
+}
+
+body.darkmode .resource-card h3 {
+    color: var(--dark-primary);
+}
+
+body.darkmode .resource-card p{
+    color: var(--dark-primary);
 }

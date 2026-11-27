@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --color-beige: #D8C6A5;
+  --color-primary: #51402F;
+  --color-secondary: #806548;
+  --color-accent: #777453;
+  --color-background: #FCF9F5;
+  --color-border: #B49A78;
+  --color-text: #30251D;
+  --color-hero: #a67739;
+
+  --font-family: Roboto, sans-serif;
+
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.5rem;
+  --font-size-base: 1rem;
+  --font-size-button: 14px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --border-width: 1px;
+  --border-style: solid;
+
+  --header-height: 70px;
+  --spacing-main: 50px;
+  --box-shadow: 0 2px 5px rgba(93, 90, 86, 0.718);
+
+}
+
+
+.resources-tabs {
+    width: 100%;
+    margin-top: 0;
+}
+
+
+.resources-tabs ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color:  color-mix(in srgb, var(--dark-background), transparent 80%);
+
+}
+
+.resources-tabs button {
+    background: none;
+    border: 2px;
+    color: var(--color-accent);
+    font: inherit;
+    font-size: small;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+
+.resources-tabs button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    border: 2px solid var(--color-accent);
+    border-radius: 5%;
+    padding: 5px;
+}
+
+
+/*Tarjetas contenido*/
+#resources-container {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+}
+
+.resource-card { 
+  background-color: #F0E8DB;
+  padding: 25px;
+  border-radius: 2px;
+  border-left: 5px solid var(--color-accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.resource-card:hover { 
+  border-left: 5px solid var(--color-hero);
+  background-color: color-mix(in srgb, var(--color-background), var(--color-hero) 40%);
+
+}
+
+ @media screen and (max-width: 590px) {
+    #resources-container {
+        grid-template-columns: 1fr;
+    }
+ }
+@media screen and (min-width: 591px) and (max-width: 768px) {
+    #resources-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+ }
+@media screen and (min-width: 769px) and (max-width: 1124px){
+    #resources-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+ }
+
+@media screen and (min-width: 1125px) {
+    #resources-container {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+ }
+
+.resource-card h3 {
+    color: var(--color-hero);
+    font-size: var(--font-size-subtitle);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.resource-card p{
+    font-size: 0.95rem;
+    margin: 0;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(48, 37, 29, 0.12);
+}
+

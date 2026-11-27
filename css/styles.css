@@ -512,6 +512,7 @@ input.Enviar{
   color: var(--color-background);
   padding: 5px;
 }
+
 .Borrar{
   font-size: var(--font-size-button);
   font-weight: var(--font-weight-bold);
