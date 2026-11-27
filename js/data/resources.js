@@ -57,7 +57,12 @@ const resources = [
         title: 'Frontend Masters',
         url: 'https://frontendmasters.com/',
         note: 'Cursos en video de expertos (de pago)'
-      }
+      },
+      {
+        title: "Color Code",
+        url: "https://www.colorcode.io/",
+        note: "Escuela de programación con vídeos sobre HTML, CSS, JavaScript y fundamentos del desarrollo web."
+      },
     ]
   },
   {
